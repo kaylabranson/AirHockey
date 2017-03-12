@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D87E9FF5-3784-77E7-B467-2AD0B52D6E66}</ProjectGuid>
+    <ProjectGuid>{E2A640AA-952B-3F96-1A41-2C11C2648016}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,7 +46,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\scripts\GoalControl.cs" />
      <Compile Include="Assets\scripts\OpponentControl.cs" />
      <Compile Include="Assets\scripts\PlayerController.cs" />
      <Compile Include="Assets\scripts\PuckControl.cs" />

@@ -7,6 +7,8 @@ public class PuckControl : MonoBehaviour
 {
 	int myCount; 
 	int oppCount;
+	public int maxSpeed;
+	Rigidbody rb;
 	public Text Scores;
 	Vector3 originalPlayerPos;
 	Vector3 originalOpponentPos;
@@ -19,6 +21,13 @@ public class PuckControl : MonoBehaviour
 		myCount = 0;
 		oppCount = 0;
 		SetScores ();
+		rb = GetComponent<Rigidbody> ();
+	}
+
+	void FixedUpdate()
+	{
+		if (rb.velocity.magnitude > maxSpeed)
+			rb.velocity = rb.velocity.normalized * maxSpeed;
 	}
 
 	void OnTriggerEnter(Collider other) 
@@ -39,6 +48,7 @@ public class PuckControl : MonoBehaviour
 	void resetPositions()
 	{
 		this.transform.position = Vector3.zero;
+		rb.velocity = Vector3.zero;
 		GameObject.FindGameObjectWithTag ("player").transform.position = (originalPlayerPos);
 		GameObject.FindGameObjectWithTag ("opp").transform.position = (originalOpponentPos);
 	}
